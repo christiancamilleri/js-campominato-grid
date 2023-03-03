@@ -8,16 +8,32 @@
     display: flex;
     flex-flow: wrap row;
 
-    width: calc(30px * 10);
-    height: calc(30px * 10);
+   width: 600px;
+   height: 600px;
     
     margin: auto;
 }
 
-.square {
-    width: 30px;
-    height: 30px;
 
+
+.square {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+
+    border: 1px solid black;
+}
+
+.medium {
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+    
+    border: 1px solid black;
+}
+
+.hard {
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+    
     border: 1px solid black;
 }
 
