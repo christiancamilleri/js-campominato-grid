@@ -12,13 +12,24 @@ const playButtonEl = document.getElementById("play-button");
 playButtonEl.addEventListener("click", function() {
     const containerEl = document.getElementById("container");
     
+    // dico al programma di non creare altri schemi uno stto l ltro ogni volta che premo il bottone
+    containerEl.innerHTML = ""
+    
     // creo ciclo for che mi crea 100 elementi
-    for(let i = 0; i < 100; i++){
+    for(let i = 1; i < 101; i++){
         // creo elemeno div
         let newSquareEl = document.createElement("div");
         // assegno classe creata in css
         newSquareEl.classList.add("square");
         // appendo al genitore
         containerEl.append(newSquareEl)
+
+        // aggiungo evento alla pressione di NewSquareEl
+        newSquareEl.addEventListener("click", function() {
+            newSquareEl.classList.toggle("blue");
+            console.log(i);
+        })
     }
+
+
 })
